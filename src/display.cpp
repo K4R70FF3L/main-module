@@ -1,5 +1,5 @@
 #include "constants.h"
-#include "stfu.h"
+#include <Arduino.h>
 
 int currentDigit = 0;
 

@@ -2,7 +2,7 @@
 #include "constants.h"
 #include "display.h"
 #include "state.h"
-#include "stfu.h"
+#include <Arduino.h>
 #include <Wire.h>
 
 // Variables

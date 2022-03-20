@@ -2,7 +2,7 @@
 #include "constants.h"
 #include "display.h"
 #include "serialNumber.h"
-#include "stfu.h"
+#include <Arduino.h>
 #include <Wire.h>
 
 int* serialNumber;
