@@ -1,12 +1,14 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-void setNumber(int number);
+void displayNumber(int number);
 
-void setFrequenzy(int number);
+void displayTime(unsigned long time);
 
-void setTime(int number);
+void displaySerial(int* serial);
 
 void clearDisplay();
+
+void handleDisplay();
 
 #endif

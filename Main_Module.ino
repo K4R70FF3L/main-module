@@ -1,6 +1,9 @@
+#include "buttons.h"
 #include "constants.h"
+#include "display.h"
 #include "state.h"
 #include "stfu.h"
+#include <Wire.h>
 
 // Variables
 int state;
@@ -47,6 +50,7 @@ void setup()
 
     // Set beginning state
     state = STATE_INITIALIZE;
+    Wire.begin();
 }
 
 void loop()
@@ -55,8 +59,14 @@ void loop()
     case STATE_INITIALIZE:
         state = initialize();
         break;
-    case STATE_SETUP:
-        state = setupModule();
+    case STATE_SETUP_SEED:
+        state = setupSeed();
+        break;
+    case STATE_SETUP_TIME:
+        state = setupTime();
+        break;
+    case STATE_SHOW_SERIAL:
+        state = showSerial();
         break;
     case STATE_READY:
         state = ready();
@@ -68,4 +78,6 @@ void loop()
         state = finished();
         break;
     }
+    handleButtons();
+    handleDisplay();
 }

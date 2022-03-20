@@ -2,7 +2,9 @@
 #define STATES
 
 int initialize();
-int setupModule();
+int setupSeed();
+int setupTime();
+int showSerial();
 int ready();
 int running();
 int finished();
