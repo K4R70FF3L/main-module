@@ -78,6 +78,7 @@ const int MAX_MODULES = 11;
 const byte MODULE_STATUS_SOLVED = 0b1;
 const byte MODULE_STATUS_STRIKE = 0b10;
 const byte MODULE_STATUS_REQUEST_TIME = 0b100;
+const byte MODULE_STATUS_REQUEST_STRIKES = 0b1000;
 
 // 7 Segment Symbols
 const int SEGMENT_NUMBERS[10][8]

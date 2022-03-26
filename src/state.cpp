@@ -178,6 +178,12 @@ int running()
             Wire.write((byte)(remainingTime));
             Wire.endTransmission();
         }
+
+        if ((moduleStatus & MODULE_STATUS_REQUEST_STRIKES) > 0) {
+            Wire.beginTransmission(index + 9);
+            Wire.write((byte)(strikes));
+            Wire.endTransmission();
+        }
         allModulesSolved = false;
     }
 
